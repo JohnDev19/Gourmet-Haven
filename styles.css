@@ -1,0 +1,368 @@
+:root {
+  --primary-color: #1c1c3b;
+  --secondary-color: #f9f3ee;
+  --accent-color: #e6a954;
+  --text-color: #333333;
+  --light-text: #ffffff;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-text) !important;
+}
+
+.nav-link {
+  color: var(--light-text) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.navbar-toggler {
+  margin-right: 0.5rem;
+  border-color: var(--light-text);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 1rem;
+  }
+
+  .nav-item {
+    text-align: left;
+  }
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero3.jpg') no-repeat center center/cover;
+  color: var(--light-text);
+  text-align: center;
+  padding: 10rem 0 6rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #d39745;
+  border-color: #d39745;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .about-image img {
+    width: 500px;
+    height: auto;
+  }
+}
+
+.feature-icon {
+  font-size: 5.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.menu-item {
+  margin-bottom: 2rem;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+#testimonials {
+  background: linear-gradient(135deg, var(--primary-color), #2a2a5a);
+  color: var(--light-text);
+  padding: 6rem 0;
+}
+
+#testimonials h2 {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.testimonial::before {
+  content: '';
+  font-family: 'Playfair Display', serif;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 8rem;
+  color: var(--accent-color);
+  opacity: 0.3;
+}
+
+.testimonial p {
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--accent-color);
+  text-align: right;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  #testimonials {
+    padding: 4rem 0;
+  }
+
+  #testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    padding: 2rem;
+  }
+}
+
+#gallery {
+  background-color: var(--secondary-color);
+  padding: 6rem 0;
+}
+
+#gallery h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 15px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-item img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-item img {
+    height: 350px;
+  }
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 4rem 0 2rem;
+}
+
+footer h4,
+footer p,
+footer .social-icons {
+  margin-left: 15px;
+}
+
+.social-icons a {
+  color: var(--light-text);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  .about-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem; 
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.75rem;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+  }
+
+  .nav-link {
+    font-size: 1.125rem;
+  }
+
+  .testimonial-author {
+    font-size: 1.25rem;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+  }
+}
